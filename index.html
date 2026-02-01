@@ -3,66 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wadara - Turismo y Aventura</title>
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Wadara Travel - Aventuras Únicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">WADARA</div>
-        <ul>
-            <li><a href="#empresa">Nosotros</a></li>
-            <li><a href="#destinos">Destinos</a></li>
-            <li><a href="#calendario">Calendario</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <nav class="barra-navegacion">
+        <div class="contenido-nav">
+            <div class="logo-pequeno">
+                <img src="LogoWadara.png" alt="Wadara Logo" onclick="mostrarInicio()">
+            </div>
+            <div class="enlaces">
+                <a href="#" onclick="mostrarInicio()">Inicio</a>
+                <a href="#" onclick="mostrarDestinos()">Destinos</a>
+                <a href="https://wa.me/573000000000">Contacto</a>
+            </div>
+        </div>
     </nav>
 
-    <header>
-        <h1>Explora el mundo con Wadara</h1>
-        <p>Experiencias turísticas inolvidables</p>
-        <a href="https://wa.me/tu_numero" class="btn-ws">¡Reserva por WhatsApp!</a>
-    </header>
+    <section id="pantalla-inicio" class="seccion-pagina">
+        <div class="capa-fondo-animado"></div>
+        <div class="contenido-bienvenida">
+            <h1>Explora el mundo con Wadara</h1>
+            <p>Aventuras diseñadas para ti</p>
+            <button class="boton-accion" onclick="mostrarDestinos()">Explorar Destinos</button>
+        </div>
+    </section>
 
-    <section id="destinos">
-        <h2>Nuestros Destinos</h2>
-        <div class="grid-destinos">
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Lugar 1">
-                <h3>Montaña Azul</h3>
-                <p>Senderismo y aire puro.</p>
-                <span class="status">Disponible</span>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Lugar 2">
-                <h3>Playa Paraíso</h3>
-                <p>Relax y aguas cristalinas.</p>
-                <span class="status">Cupos Llenos</span>
+    <section id="pantalla-destinos" class="seccion-pagina oculto">
+        <div class="contenedor-destinos">
+            <h2 class="titulo-destinos">Nuestros Destinos</h2>
+            <div class="cuadricula">
+                <div class="tarjeta">
+                    <div class="imagen-destino" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600');"></div>
+                    <div class="info-tarjeta">
+                        <h3>Montaña Mágica</h3>
+                        <p>Descubre senderos únicos y llenos de vida.</p>
+                        <button class="boton-detalles">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-destino" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600');"></div>
+                    <div class="info-tarjeta">
+                        <h3>Playa Paraíso</h3>
+                        <p>Arena blanca y el azul del mar te esperan.</p>
+                        <button class="boton-detalles">Ver Detalles</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="calendario">
-        <h2>Próximas Salidas</h2>
-        <table>
-            <tr>
-                <th>Fecha</th>
-                <th>Destino</th>
-                <th>Disponibilidad</th>
-            </tr>
-            <tr>
-                <td>15 de Marzo</td>
-                <td>Montaña Azul</td>
-                <td>8 Lugares</td>
-            </tr>
-            <tr>
-                <td>22 de Marzo</td>
-                <td>Playa Paraíso</td>
-                <td>Agotado</td>
-            </tr>
-        </table>
-    </section>
+    <a href="https://wa.me/573000000000" class="boton-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function mostrarDestinos() {
+            document.getElementById('pantalla-inicio').classList.add('oculto');
+            document.getElementById('pantalla-destinos').classList.remove('oculto');
+            window.scrollTo(0, 0);
+        }
+
+        function mostrarInicio() {
+            document.getElementById('pantalla-inicio').classList.remove('oculto');
+            document.getElementById('pantalla-destinos').classList.add('oculto');
+            window.scrollTo(0, 0);
+        }
+    </script>
 
 </body>
 </html>
