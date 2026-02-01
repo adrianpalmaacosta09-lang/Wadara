@@ -1,97 +1,48 @@
-/* RESET GENERAL */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, sans-serif; overflow-x: hidden; background-color: #f8f9fa; }
+body { font-family: 'Segoe UI', sans-serif; background-color:rgb(23, 189, 255); }
 
-/* NAVEGACIÓN */
-.barra-navegacion { background-color: #222; padding: 10px 5%; position: sticky; top: 0; z-index: 1000; }
+.barra-navegacion { background: #222; padding: 10px 5%; position: sticky; top: 0; z-index: 1000; }
 .contenido-nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-.logo-pequeno img { height: 45px; cursor: pointer; transition: 0.3s; }
-.logo-pequeno img:hover { transform: scale(1.05); }
-.enlaces a { color: #ddd; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 14px; transition: 0.3s; }
-.enlaces a:hover { color: #fff; }
+.logo-pequeno img { height: 45px; cursor: pointer; }
+.enlaces a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
 
-/* CONTROL DE VISIBILIDAD */
 .oculto { display: none !important; }
 .seccion-pagina { min-height: 90vh; width: 100%; position: relative; }
 
-/* --- PÁGINA DE INICIO (MENSAJE Y FONDO) --- */
+/* FONDO INICIO */
 .capa-fondo-animado {
     position: absolute;
-    top: 0; left: 0;
-    width: 110%; height: 110%;
-    background-image: url('FondoWadara.png'); /* Asegúrate de tener esta imagen */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #000 url('FondoWadara.png') center/cover no-repeat;
+    z-index: -1;
+    animation: zoom 20s infinite alternate;
+}
+@keyframes zoom { from {transform: scale(1);} to {transform: scale(1.1);} }
+
+.contenido-bienvenida { height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); }
+.contenido-bienvenida h1 { font-size: 3rem; text-align: center; padding: 0 10px; }
+.boton-accion { background: #2E7D32; color: white; border: none; padding: 15px 30px; border-radius: 50px; margin-top: 20px; cursor: pointer; font-weight: bold; }
+
+/* DESTINOS - AQUÍ ESTÁ EL TRUCO PARA QUE SE VEAN */
+.contenedor-destinos { padding: 40px 5%; text-align: center; }
+.titulo-destinos { margin-bottom: 30px; font-size: 2rem; color: #333; }
+.cuadricula { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.tarjeta { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* ESTO ES LO QUE HACE QUE LA IMAGEN APAREZCA */
+.imagen-destino {
+    width: 100%;
+    height: 200px; /* Altura fija obligatoria */
+    background-color: #ddd; /* Color gris de fondo por si falla internet */
     background-size: cover;
     background-position: center;
-    z-index: -1;
-    animation: zoomMovimiento 30s infinite alternate ease-in-out;
+    background-repeat: no-repeat;
+    display: block;
 }
 
-@keyframes zoomMovimiento {
-    from { transform: scale(1) translate(0, 0); }
-    to { transform: scale(1.1) translate(-20px, -10px); }
-}
+.info-tarjeta { padding: 20px; }
+.info-tarjeta h3 { margin-bottom: 10px; color: #222; }
+.boton-detalles { background: #eee; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
 
-.contenido-bienvenida {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: greenyellow;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
-    padding: 20px;
-}
-
-.contenido-bienvenida h1 {
-    font-size: 4rem; /* Texto muy grande y claro */
-    font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-
-.contenido-bienvenida p {
-    font-size: 1.8rem;
-    font-weight: 300;
-    opacity: 0.95;
-}
-
-.boton-accion {
-    background-color:blue;
-    color: white;
-    border: none;
-    padding: 18px 45px;
-    border-radius: 50px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    transition: 0.3s;
-}
-
-.boton-accion:hover { background-color: #1b5e20; transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
-
-/* --- PÁGINA DE DESTINOS --- */
-.contenedor-destinos { padding: 60px 10%; background-color: #f8f9fa; min-height: 100vh; }
-.titulo-destinos { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #333; }
-.cuadricula { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-.tarjeta { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: 0.3s; }
-.tarjeta:hover { transform: translateY(-10px); }
-.imagen-destino { height: 220px; background-size: cover; background-position: center; }
-.info-tarjeta { padding: 20px; text-align: center; }
-.boton-detalles { background: #eee; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 15px; cursor: pointer; font-weight: bold; }
-
-/* WHATSAPP */
-.boton-whatsapp {
-    position: fixed; bottom: 30px; right: 30px;
-    background-color: #25d366; color: white;
-    width: 65px; height: 65px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 35px; text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 2000;
-    transition: 0.3s;
-}
-.boton-whatsapp:hover { transform: scale(1.1); }
+.boton-whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 2000; }

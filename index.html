@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wadara Travel - Aventuras Únicas</title>
+    <title>Wadara Travel - Venezuela</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -35,22 +35,43 @@
         <div class="contenedor-destinos">
             <h2 class="titulo-destinos">Nuestros Destinos</h2>
             <div class="cuadricula">
+                
                 <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600');"></div>
+                    <div class="imagen-destino" style="background-image: url('Choroni.png');"></div>
                     <div class="info-tarjeta">
-                        <h3>Montaña Mágica</h3>
-                        <p>Descubre senderos únicos y llenos de vida.</p>
-                        <button class="boton-detalles">Ver Detalles</button>
+                        <h3>Choroní</h3>
+                        <p>Playas de ensueño y ritmo de tambor.</p>
+                        <button class="boton-detalles">Ver Planes</button>
                     </div>
                 </div>
+
                 <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600');"></div>
+                    <div class="imagen-destino" style="background-image: url('El\ hatillo.png');"></div>
                     <div class="info-tarjeta">
-                        <h3>Playa Paraíso</h3>
-                        <p>Arena blanca y el azul del mar te esperan.</p>
-                        <button class="boton-detalles">Ver Detalles</button>
+                        <h3>El Hatillo</h3>
+                        <p>Tradición y color en Caracas.</p>
+                        <button class="boton-detalles">Ver Planes</button>
                     </div>
                 </div>
+
+                <div class="tarjeta">
+                    <div class="imagen-destino" style="background-image: url('Caruao.png');"></div>
+                    <div class="info-tarjeta">
+                        <h3>Caruao</h3>
+                        <p>Selva y mar en la costa virgen.</p>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="imagen-destino" style="background-image: url('Mochima.png')"></div>
+                    <div class="info-tarjeta">
+                        <h3>Mochima</h3>
+                        <p>Aguas turquesas y paseos en bote.</p>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -65,13 +86,11 @@
             document.getElementById('pantalla-destinos').classList.remove('oculto');
             window.scrollTo(0, 0);
         }
-
         function mostrarInicio() {
             document.getElementById('pantalla-inicio').classList.remove('oculto');
             document.getElementById('pantalla-destinos').classList.add('oculto');
             window.scrollTo(0, 0);
         }
     </script>
-
 </body>
 </html>
