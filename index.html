@@ -3,94 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wadara Travel - Venezuela</title>
+    <title>Wadara Travel | Venezuela</title>
     <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="capa-fondo-animado"></div>
+
     <nav class="barra-navegacion">
         <div class="contenido-nav">
             <div class="logo-pequeno">
-                <img src="LogoWadara.png" alt="Wadara Logo" onclick="mostrarInicio()">
+                <img src="LogoWadara.png" alt="Wadara" onclick="mostrarInicio()" style="cursor:pointer;">
             </div>
             <div class="enlaces">
-                <a href="#" onclick="mostrarInicio()">Inicio</a>
-                <a href="#" onclick="mostrarDestinos()">Destinos</a>
-                <a href="https://wa.me/573000000000">Contacto</a>
+                <a href="javascript:void(0)" onclick="mostrarInicio()">Inicio</a>
+                <a href="javascript:void(0)" onclick="mostrarNosotros()">Quiénes Somos</a>
+                <a href="javascript:void(0)" onclick="mostrarExperiencias()">Experiencias</a>
+                <a href="javascript:void(0)" onclick="mostrarDestinos()">Destinos</a>
+                <a href="javascript:void(0)" onclick="mostrarContacto()">Contacto</a>
             </div>
         </div>
     </nav>
 
     <section id="pantalla-inicio" class="seccion-pagina">
-        <div class="capa-fondo-animado"></div>
         <div class="contenido-bienvenida">
-            <h1>Explora el mundo con Wadara</h1>
-            <p>Aventuras diseñadas para ti</p>
-            <button class="boton-accion" onclick="mostrarDestinos()">Explorar Destinos</button>
-        </div>
-    </section>
-
-    <section id="pantalla-destinos" class="seccion-pagina oculto">
-        <div class="contenedor-destinos">
-            <h2 class="titulo-destinos">Nuestros Destinos</h2>
-            <div class="cuadricula">
-                
-                <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('Choroni.png');"></div>
-                    <div class="info-tarjeta">
-                        <h3>Choroní</h3>
-                        <p>Playas de ensueño y ritmo de tambor.</p>
-                        <button class="boton-detalles">Ver Planes</button>
-                    </div>
-                </div>
-
-                <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('El\ hatillo.png');"></div>
-                    <div class="info-tarjeta">
-                        <h3>El Hatillo</h3>
-                        <p>Tradición y color en Caracas.</p>
-                        <button class="boton-detalles">Ver Planes</button>
-                    </div>
-                </div>
-
-                <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('Caruao.png');"></div>
-                    <div class="info-tarjeta">
-                        <h3>Caruao</h3>
-                        <p>Selva y mar en la costa virgen.</p>
-                        <button class="boton-detalles">Ver Planes</button>
-                    </div>
-                </div>
-
-                <div class="tarjeta">
-                    <div class="imagen-destino" style="background-image: url('Mochima.png')"></div>
-                    <div class="info-tarjeta">
-                        <h3>Mochima</h3>
-                        <p>Aguas turquesas y paseos en bote.</p>
-                        <button class="boton-detalles">Ver Planes</button>
-                    </div>
-                </div>
-
+            <h1 class="texto-animado-wadara grande">Explora el mundo con Wadara</h1>
+            <p class="texto-animado-wadara sub">Aventuras diseñadas para ti</p>
+            <div class="contenedor-botones-columna">
+                <button class="boton-accion" onclick="mostrarDestinos()">Explorar Destinos</button>
+                <button class="boton-accion" onclick="mostrarContacto()">Contáctanos</button>
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/573000000000" class="boton-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <section id="pantalla-nosotros" class="seccion-pagina oculto">
+        <div class="contenedor-global">
+            <h2 class="texto-animado-wadara grande">Quiénes Somos</h2>
+            <div class="tarjeta-wadara cuadro-texto">
+                <p>En Wadara Travel, somos apasionados por mostrar la belleza oculta de Venezuela. Nuestra misión es crear experiencias únicas que conecten a los viajeros con la naturaleza.</p>
+            </div>
+            <h2 class="texto-animado-wadara sub" style="margin-top: 40px;">Nuestras Locuras</h2>
+            <div class="cuadricula-videos">
+                <div class="tarjeta-wadara video"><video controls><source src="locura1.mp4"></video></div>
+                <div class="tarjeta-wadara video"><video controls><source src="locura2.mp4"></video></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantalla-experiencias" class="seccion-pagina oculto">
+        <div class="contenedor-global">
+            <h2 class="texto-animado-wadara grande">Nuestras Experiencias</h2>
+            <div class="cuadricula-fotos">
+                <div class="foto-experiencia" style="background-image: url('v1.jpg');"></div>
+                <div class="foto-experiencia" style="background-image: url('v2.jpg');"></div>
+                <div class="foto-experiencia" style="background-image: url('v3.jpg');"></div>
+                <div class="foto-experiencia" style="background-image: url('v4.jpg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantalla-destinos" class="seccion-pagina oculto">
+        <div class="contenedor-global">
+            <h2 class="texto-animado-wadara grande">Nuestros Destinos</h2>
+            <div class="cuadricula">
+                <div class="tarjeta-wadara">
+                    <div class="imagen-destino" style="background-image: url('Choroni.png');"></div>
+                    <div class="info-tarjeta">
+                        <h3 class="texto-animado-wadara mini">Choroní</h3>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+                <div class="tarjeta-wadara">
+                    <div class="imagen-destino" style="background-image: url('El hatillo.png');"></div>
+                    <div class="info-tarjeta">
+                        <h3 class="texto-animado-wadara mini">El Hatillo</h3>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+                <div class="tarjeta-wadara">
+                    <div class="imagen-destino" style="background-image: url('Caruao.png');"></div>
+                    <div class="info-tarjeta">
+                        <h3 class="texto-animado-wadara mini">Caruao</h3>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+                <div class="tarjeta-wadara">
+                    <div class="imagen-destino" style="background-image: url('Mochima.png');"></div>
+                    <div class="info-tarjeta">
+                        <h3 class="texto-animado-wadara mini">Mochima</h3>
+                        <button class="boton-detalles">Ver Planes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantalla-contacto" class="seccion-pagina oculto">
+        <h2 class="texto-animado-wadara grande">Nuestras Redes Sociales</h2>
+        <div class="cuadricula-redes">
+            <a href="https://wa.me/584242451450" target="_blank" class="tarjeta-red">
+                <i class="fab fa-whatsapp icono-ws-original"></i>
+                <h3 class="texto-animado-wadara mini">WhatsApp</h3>
+            </a>
+            <a href="https://instagram.com/wadaratravel" target="_blank" class="tarjeta-red">
+                <i class="fab fa-instagram icono-ig-original"></i>
+                <h3 class="texto-animado-wadara mini">Instagram</h3>
+            </a>
+        </div>
+    </section>
 
     <script>
-        function mostrarDestinos() {
-            document.getElementById('pantalla-inicio').classList.add('oculto');
-            document.getElementById('pantalla-destinos').classList.remove('oculto');
-            window.scrollTo(0, 0);
+        function ocultarTodo() {
+            ['pantalla-inicio','pantalla-nosotros','pantalla-experiencias','pantalla-destinos','pantalla-contacto'].forEach(id => {
+                const s = document.getElementById(id);
+                if(s) s.classList.add('oculto');
+            });
         }
-        function mostrarInicio() {
-            document.getElementById('pantalla-inicio').classList.remove('oculto');
-            document.getElementById('pantalla-destinos').classList.add('oculto');
-            window.scrollTo(0, 0);
-        }
+        function mostrarInicio() { ocultarTodo(); document.getElementById('pantalla-inicio').classList.remove('oculto'); }
+        function mostrarNosotros() { ocultarTodo(); document.getElementById('pantalla-nosotros').classList.remove('oculto'); }
+        function mostrarExperiencias() { ocultarTodo(); document.getElementById('pantalla-experiencias').classList.remove('oculto'); }
+        function mostrarDestinos() { ocultarTodo(); document.getElementById('pantalla-destinos').classList.remove('oculto'); }
+        function mostrarContacto() { ocultarTodo(); document.getElementById('pantalla-contacto').classList.remove('oculto'); }
     </script>
 </body>
 </html>
